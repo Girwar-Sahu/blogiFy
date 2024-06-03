@@ -18,21 +18,22 @@ function RegisterPage() {
   const status = useSelector((state) => state.user.status);
   const error = useSelector((state) => state.user.error);
 
-  // useEffect(() => {
-  //   if (status === "succeeded") {
-  //     toast.success("Register successful", {
-  //       position: "top-center",
-  //       autoClose: 3000,
-  //       hideProgressBar: false,
-  //       closeOnClick: true,
-  //       pauseOnHover: true,
-  //       draggable: true,
-  //       progress: undefined,
-  //       theme: "light",
-  //     });
-  //     dispatch(resetStatus());
-  //   }
-  // }, [status, dispatch]);
+  useEffect(() => {
+    if (status === "succeeded" && currentUser) {
+      toast.success("Register successful", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      navigate(`/profile/${currentUser.uid}`)
+      dispatch(resetStatus());
+    }
+  }, [status,currentUser,navigate, dispatch]);
 
   useEffect(() => {
     if (error) {
@@ -61,7 +62,6 @@ function RegisterPage() {
             photoURL: user.photoURL,
           })
         );
-        navigate(`/profile/${currentUser.uid}`)
       } else {
         dispatch(clearUser());
       }

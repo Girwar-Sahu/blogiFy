@@ -12,8 +12,10 @@ import {
 } from "../slice/BlogSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {useNavigate} from "react-router-dom"
 
 function UserProfile() {
+  const navigate = useNavigate()
   const param = useParams();
   const dispatch = useDispatch();
   const { blogs, status, error } = useSelector((state) => state.blogs);
@@ -35,14 +37,14 @@ function UserProfile() {
     }
   }, [error, dispatch]);
 
-  useEffect(() => {
-    console.log("Fetching blogs for user:", param.id); // Add logging
-    dispatch(fetchBlogsByAuthorId(param.id));
-  }, [dispatch, param.id]);
+  // useEffect(() => {
+  //   // console.log("Fetching blogs for user:", param.id); // Add logging
+  //   dispatch(fetchBlogsByAuthorId(param.id));
+  // }, [dispatch, param.id]);
 
-  useEffect(() => {
-    console.log("Blogs state:", blogs); // Add logging
-  }, [blogs]);
+  // useEffect(() => {
+  //   // console.log("Blogs state:", blogs); // Add logging
+  // }, [blogs]);
 
   return (
     <div>
@@ -55,6 +57,9 @@ function UserProfile() {
           <h1 className="app-heading">My Blogs</h1>
           <i className="fa-sharp fa-solid fa-list fa-lg"></i>
         </div>
+      </div>
+      <div className="container">
+        <button className="create-blog-btn" onClick={()=> navigate(`/addblog`)}>Create New Blog</button>
       </div>
       <div className="container">
         <div id="blogs" className="app-cards">

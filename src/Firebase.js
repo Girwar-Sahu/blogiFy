@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig ={
-   apiKey:"",
-   authDomain: "",
-   projectId: "",
-   storageBucket:"",
-   messagingSenderId:  "",
-   appId: "",
+   apiKey:"AIzaSyD6-Uw5Y9OwKEF5axc1-R_iCyKj1Ztkpg4",
+   authDomain: "blogify-b7f67.firebaseapp.com",
+   projectId: "blogify-b7f67",
+   storageBucket:"blogify-b7f67.appspot.com",
+   messagingSenderId:  "236166918466",
+   appId: "1:236166918466:web:199f3a4d11f986fd6998db",
 }
 
 const app = initializeApp(firebaseConfig)

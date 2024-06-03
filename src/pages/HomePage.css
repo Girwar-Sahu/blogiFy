@@ -51,5 +51,18 @@
   flex-direction: column;
   width: 80%;
   margin: 2rem auto;
-  
+}
+
+.create-blog-btn {
+  padding: 0.5rem 1rem;
+   margin: 0.5rem;
+   background-color: #4B6BFB;
+   color: white;
+   border: none;
+   font-size: 1rem;
+   border-radius: 0.5rem;
+}
+
+.create-blog-btn:hover{
+  background-color: #3653d7;
 }
