@@ -1,0 +1,115 @@
+.blog-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.blog-tag {
+  margin: 1rem 0;
+  color: #4b6bfb;
+  background-color: #f6f7ff;
+  border: none;
+  border-radius: 0.5rem;
+  width: 40%;
+  padding: 0.5rem 0.8rem;
+  font-size: 14px;
+}
+
+.auther-dtl {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-blog-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vmin;
+  border-radius: 1rem;
+  /* padding: 2rem; */
+  margin: 1.5rem 0;
+}
+
+.main-blog-img img {
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.blog-comment {
+  display: flex;
+  align-items: center;
+}
+
+.blog-comment form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.blog-comment form label {
+  font-weight: 500;
+  color: #3B3C4A;
+}
+.blog-comment form textarea {
+   resize: vertical;
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  /* border: none; */
+  border: 3px solid #E8E8EA;
+  background-color: #f6f6f7;
+  width: 100%;
+  min-height: 100px;
+}
+
+.blog-comment form button {
+  border: none;
+  border-radius: 0.5rem;
+  color: #4b6bfb;
+  background-color: white;
+  border: 2px solid #4b6bfb;
+  padding: 0.5rem 1rem;
+  /* width: 50%; */
+}
+.blog-comment form button:hover{
+   color: white;
+   background-color: #4b6bfb;
+   /* border: none; */
+}
+
+.comment-body{
+   display: flex;
+   align-items: center;
+   width: 35%;
+}
+
+.comment-body h5{
+   /* width: 40%; */
+   margin-left: 2rem;
+   color:white;
+   background-color: #3B3C4A;
+   padding: 0.5rem 2rem;
+   border-radius: 0.5rem;
+}
+
+@media (max-width: 850px) {
+  .blog-page-container {
+    width: 100%;
+  }
+  
+  .comment-body{
+   width: 100%;
+  }
+}

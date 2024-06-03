@@ -1,0 +1,25 @@
+{
+  "slides": [
+    {
+      "src": "/c-image3.jpg",
+      "alt": "image1",
+      "title":"Discover the Latest Insights: Stay Ahead with Our Expert Articles",
+      "tag": "Trending Now",
+      "date":"June 1, 2024"
+    },
+    {
+      "src": "/c-image2.jpg",
+      "alt": "image1",
+      "title":"Inspiring Stories and Trends: Dive into Our Featured Content",
+      "tag": "Latest Updates",
+      "date":"May 29, 2024"
+    },
+    {
+      "src": "/c-image1.jpg",
+      "alt": "image1",
+      "title":"Top Tips and Tricks: Enhance Your Skills with Our Guides",
+      "tag":"Exclusive",
+      "date":"May 30, 2024"
+    }
+  ]
+}
