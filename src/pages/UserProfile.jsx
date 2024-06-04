@@ -37,14 +37,9 @@ function UserProfile() {
     }
   }, [error, dispatch]);
 
-  // useEffect(() => {
-  //   // console.log("Fetching blogs for user:", param.id); // Add logging
-  //   dispatch(fetchBlogsByAuthorId(param.id));
-  // }, [dispatch, param.id]);
-
-  // useEffect(() => {
-  //   // console.log("Blogs state:", blogs); // Add logging
-  // }, [blogs]);
+  useEffect(() => {
+    dispatch(fetchBlogsByAuthorId(param.id));
+  }, [dispatch, param.id]);
 
   return (
     <div>
