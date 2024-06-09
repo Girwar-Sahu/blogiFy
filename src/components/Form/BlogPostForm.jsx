@@ -23,7 +23,6 @@ function BlogPostForm(props) {
 
   useEffect(() => {
     if (props.id) {
-      console.log(props.id);
       setTitle(props.title);
       setDescription(props.description);
       setCategory(props.category);
@@ -191,7 +190,7 @@ function BlogPostForm(props) {
             <Loader /> Loading...
           </div>
         )}
-        {status !== "loading" && props.id ? "Update Blog" : "Post Blog"}
+        {status !== "loading" && ( props.id ? "Update Blog" : "Post Blog")}
       </button>
     </form>
   );

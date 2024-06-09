@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Nav.css";
 import logo from "/svg/logo.svg";
 import { onAuthStateChanged } from "firebase/auth";
@@ -9,6 +9,7 @@ import { setUser,logoutUser, clearUser, resetStatus , resetError} from "../../sl
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
   const status = useSelector((state) => state.user.status);
@@ -32,8 +33,9 @@ const Navbar = () => {
     return unsubscribe;
   }, [dispatch]);
 
-  const handleLoggedIn = ()=>{
+  const handleLoggedOut = ()=>{
     dispatch(logoutUser())
+    navigate('/')
   }
 
   return (
@@ -69,7 +71,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="nav-btns">
-        {user ? <><img src="/user-avatar.png" width="45" alt="avatar" /> {user.displayName} <span><button onClick={handleLoggedIn} className="nav-btn">Logout</button></span> </> : <><Link to="/login"> <button className="nav-btn">Login</button></Link>
+        {user ? <><img src="/user-avatar.png" width="45" alt="avatar" /> {user.displayName} <span><button onClick={handleLoggedOut} className="nav-btn">Logout</button></span> </> : <><Link to="/login"> <button className="nav-btn">Login</button></Link>
         <Link to="/register"> <button className="nav-btn">Register</button></Link>
         </> }
         

@@ -1,3 +1,4 @@
+
 .card-container {
   display: flex;
   flex-direction: column;
@@ -6,9 +7,9 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  border: 2px solid #e8e8ea;
+  border: 2px solid var(--very-light-gray);
   border-radius: 0.5rem;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px var(--light-black-trans);
 }
 
 .card-img-container {
@@ -33,8 +34,8 @@
 
 .card-capsule {
   margin: 1rem 0;
-  color: #4b6bfb;
-  background-color: #f6f7ff;
+  color: var(--bright-blue);
+  background-color: var(--light-blue);
   border: none;
   border-radius: 0.3rem;
   width: 40%;
@@ -43,21 +44,21 @@
 }
 
 .card-title {
-  color: #181a2a;
+  color: var(--deep-navy);
   font-size: 1.3rem;
   height: 100px;
   text-overflow: ellipsis;
   word-wrap: normal;
   overflow: hidden;
-  transition: hover 0.5 ease-in-out;
+  transition: hover 0.5s ease-in-out;
 }
 
-.card-link{
-   text-decoration: none;
+.card-link {
+  text-decoration: none;
 }
 
-.card-title:hover{
-   color: #4B6BFB;
+.card-title:hover {
+  color: var(--bright-blue);
 }
 
 .card-profile {
@@ -69,23 +70,23 @@
 }
 
 .card-profile p {
-  color: #97989f;
+  color: var(--light-gray);
   font-size: 1em;
 }
 
-.extra-btn{
-   padding: 0.5rem 1rem;
-   margin: 0.5rem;
-   background-color: #4B6BFB;
-   color: white;
-   border: none;
-   border-radius: 0.5rem;
+.extra-btn {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: var(--bright-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
 }
 
-.extra-btn:hover{
-   background-color: #3653d7;
+.extra-btn:hover {
+  background-color: #3653d7;
 }
 
-.card-container-extra{
-   height: 550px;
+.card-container-extra {
+  height: 550px;
 }
