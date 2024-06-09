@@ -74,7 +74,7 @@ To get started with Blogify, follow these steps:
       ```sh
       git commit -m 'Add some feature'
       ```
-  4.Push to the branch:
+  4. Push to the branch:
       ```sh
       git push origin feature/your-feature-name
       ```
