@@ -39,7 +39,7 @@ To get started with Blogify, follow these steps:
    ```
 4. add your firebase api key and project id in firebase.js
    ```sh
-    apiKey:"",
+   apiKey:"",
    authDomain: "",
    projectId: "",
    storageBucket:"",
@@ -47,9 +47,9 @@ To get started with Blogify, follow these steps:
    appId: "",
    ```
 5. Start the development server:
-  ```sh
+   ```sh
     npm run dev
-  ```
+   ```
 ## Technologies
  - React
  - React-Redux-Toolkit
@@ -63,21 +63,21 @@ To get started with Blogify, follow these steps:
   - **Managing Blogs:** Edit or delete your blogs from your profile page.
   - **Browsing Blogs:** Explore blogs by category or author.
 ## Contributing
-If you have any suggestions or find any issues, feel free to contribute. Here’s how you can do it:
+  If you have any suggestions or find any issues, feel free to contribute. Here’s how you can do it:
 
-1. Fork the repository.
-2. Create a new branch:
-   ```sh
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit your changes:
-   ```sh
-   git commit -m 'Add some feature'
-    ```
-4.Push to the branch:
-  ```sh
-  git push origin feature/your-feature-name
-  ```
-5. Open a pull request
+  1. Fork the repository.
+  2. Create a new branch:
+      ```sh
+      git checkout -b feature/your-feature-name
+      ```
+  3. Commit your changes:
+      ```sh
+      git commit -m 'Add some feature'
+      ```
+  4.Push to the branch:
+      ```sh
+      git push origin feature/your-feature-name
+      ```
+  5. Open a pull request
 
 
