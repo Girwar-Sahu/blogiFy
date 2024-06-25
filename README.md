@@ -26,6 +26,7 @@ welsite link - https://blog-blogify.netlify.app/
 - **Real-Time Updates**: Instant synchronization with Firebase Firestore.
 - **Media Storage**: Upload and manage images for your blogs with Firebase Storage.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Dark Mode**: Uses system default mode and can switch between light and dark mode.
 
 ## Installation
 
