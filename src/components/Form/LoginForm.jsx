@@ -56,7 +56,7 @@ function LoginForm() {
           placeholder="Enter your Password"
           required
         />
-        <img src="/svg/eye.svg" alt="" />
+        {/* <img src="/svg/eye.svg" alt="" /> */}
       </div>
       <div className="flex-row">
         <span className="span">Forgot password?</span>

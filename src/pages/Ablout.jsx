@@ -7,9 +7,7 @@ import Footer from "../components/Footer/Footer";
 function AboutPage() {
   return (
     <div>
-      <div className="container">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="container about-container">
         <h1>About Us</h1>
         <h3>Our Mission</h3>
@@ -48,9 +46,7 @@ function AboutPage() {
           and mobile devices.
         </p>
       </div>
-      <div className="container">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

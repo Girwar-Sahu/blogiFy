@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link , useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader2";
 import { createBlog, updateBlog } from "../../slice/BlogSlice";
 import { toast, ToastContainer } from "react-toastify";
@@ -11,16 +11,17 @@ import JoditEditor from "jodit-react";
 
 function BlogPostForm(props) {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const editor = useRef(null);
   const currentUser = useSelector((state) => state.user.user);
   const status = useSelector((state) => state.blogs.status);
+  const mode = useSelector((state)=> state.mode.mode);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [content, setContent] = useState("");
   const [coverImg, setCoverImg] = useState(null);
-
+ 
   useEffect(() => {
     if (props.id) {
       setTitle(props.title);
@@ -29,17 +30,33 @@ function BlogPostForm(props) {
       setContent(props.content);
       setCoverImg(props.coverImg);
     }
-  }, [props.id, props.title,props.coverImg, props.description, props.category, props.content]);
+  }, [
+    props.id,
+    props.title,
+    props.coverImg,
+    props.description,
+    props.category,
+    props.content,
+  ]);
 
   const config = useMemo(
     () => ({
       readonly: false,
       toolbarSticky: false,
       minHeight: 400,
-      maxHeight: 600,
-      uploader: {
-        insertImageAsBase64URI: false,
-      },
+      maxHeight: 500,
+      width: "100%",
+      uploader: { insertImageAsBase64URI: false },
+      showXPathInStatusbar: false,
+      showCharsCounter: false,
+      showWordsCounter: false,
+      toolbarAdaptive: true,
+      // style: {
+      //   "background-color": mode ? "#141725" : '',
+      //   "color": mode ? "#97999E" : '',
+      //   "border":"none",
+      //   "outline":"none",
+      // },
       placeholder: props.placeholder || "",
       buttons: [
         "bold",
@@ -69,6 +86,8 @@ function BlogPostForm(props) {
     [props.placeholder]
   );
 
+  const editorClass = mode ? "jodit-editor-dark" : "jodit-editor-light";
+
   const handleUpdate = (e) => {
     e.preventDefault();
     if (coverImg) {
@@ -78,9 +97,16 @@ function BlogPostForm(props) {
         displayName: currentUser.displayName,
       };
       dispatch(
-        updateBlog({id:props.id, title, description, category, content, coverImg, user })
+        updateBlog({
+          id: props.id,
+          title,
+          description,
+          category,
+          content,
+          coverImg,
+          user,
+        })
       );
-
     } else {
       toast.error("Please select a cover image");
     }
@@ -172,12 +198,12 @@ function BlogPostForm(props) {
       <div className="flex-column">
         <label>Content</label>
       </div>
-      <div className="inputForm inputForm--textarea">
+      <div className="inputForm-textarea">
         <JoditEditor
           ref={editor}
           value={content}
           config={config}
-          className="input textarea"
+          className={editorClass}
           tabIndex={1} // tabIndex of textarea
           onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
           onChange={(newContent) => {}}
@@ -190,7 +216,7 @@ function BlogPostForm(props) {
             <Loader /> Loading...
           </div>
         )}
-        {status !== "loading" && ( props.id ? "Update Blog" : "Post Blog")}
+        {status !== "loading" && (props.id ? "Update Blog" : "Post Blog")}
       </button>
     </form>
   );

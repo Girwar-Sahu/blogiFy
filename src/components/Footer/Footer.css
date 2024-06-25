@@ -1,14 +1,18 @@
-
 .footer {
   width: 100%;
-  background-color: var(--extra-light-gray);
+  background-color: var(--footer-color);
   padding: 20px 0;
-  color: var(--dark-gray-black);
+  color: var(--heading-color);
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: background-color .25s ease-in-out;
+}
+
+#about p{
+  color: var(--paragraph-color);
 }
 
 .footer-container {
@@ -47,24 +51,34 @@
 }
 
 .footer-section ul li a {
-  color: var(--dark-gray-black);
+  color: var(--paragraph-color);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-  color: var(--bright-blue);
+  color: #4B6BFB;
 }
 
 .newsletter {
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--news-letter);
   padding: 1rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: background-color .25s ease-in-out;
+}
+
+.newsletter p{
+  color: var(--paragraph-color);
+}
+
+.newsletter form input {
+  background-color: var(--footer-color);
+  color: var(--paragraph-color);
 }
 
 .footer-section form {
@@ -78,26 +92,26 @@
 .footer-section form button {
   padding: 10px;
   margin: 5px 0;
-  border: 1px solid var(--light-silver);
+  border: 1px solid var(--border-line-color);
   border-radius: 5px;
   outline: none;
 }
 
 .footer-section form button {
-  background-color: var(--bright-blue);
-  color: var(--white);
+  background-color: var(--btn-primary-color);
+  color: #fff;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .footer-section form button:hover {
-  background-color: var(--strong-blue);
+  background-color: #2b50f5;
 }
 
 .footer-bottom {
   /* background-color: #e0e0e0; */
-  border-top: 2px solid var(--very-light-gray);
+  border-top: 2px solid var(--border-line-color);
   padding: 10px 0;
   text-align: center;
   width: 80%;
@@ -115,14 +129,14 @@
 
 .footer-bottom-links a {
   margin: 0 10px;
-  color: var(--dark-gray-black);
+  color: var(--paragraph-color);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s;
 }
 
 .footer-bottom-links a:hover {
-  color: var(--bright-blue);
+  color:var(--btn-primary-color);
 }
 
 @media (max-width: 768px) {

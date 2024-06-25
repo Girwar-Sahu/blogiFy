@@ -13,10 +13,10 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function UpdateBlog() {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const param = useParams();
   const { blog, status, error } = useSelector((state) => state.blogs);
-  const {user} = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(fetchBlog(param.id));
@@ -76,9 +76,7 @@ function UpdateBlog() {
   return (
     <div>
       <ToastContainer />
-      <div className="container">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="container container-body">
         <BlogPostForm
           id={blog.id}
@@ -89,9 +87,7 @@ function UpdateBlog() {
           coverImg={blog.coverImg}
         />
       </div>
-      <div className="container">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

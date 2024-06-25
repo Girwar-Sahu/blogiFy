@@ -44,9 +44,7 @@ function UserProfile() {
   return (
     <div>
       <ToastContainer />
-      <div className="container">
         <Navbar />
-      </div>
       <div className="container">
         <div className="app-heading-container">
           <h1 className="app-heading">My Blogs</h1>

@@ -1,19 +1,18 @@
-
 .blog-page-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 70%;
   padding: 2.5rem;
-  background-color: var(--white);
+  background-color: var(--footer-color);
   border-radius: 1rem;
   gap: 1rem;
 }
 
 .blog-tag {
   margin: 1rem 0;
-  color: var(--bright-blue);
-  background-color: var(--light-blue);
+  color: var(--btn-primary-color);
+  background-color: var(--btn-bg-color);
   border: none;
   border-radius: 0.5rem;
   width: 40%;
@@ -21,10 +20,21 @@
   font-size: 14px;
 }
 
+.blog-title-area h1 {
+  color: var(--heading-color);
+}
+.blog-title-area p {
+  color: var(--paragraph-color);
+}
+
 .auther-dtl {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.auther-dtl p {
+  color: var(--paragraph-color);
 }
 
 .main-blog-img {
@@ -47,6 +57,14 @@
   border-radius: 1rem;
 }
 
+.main-content{
+  color: var(--heading-color);
+}
+
+.comment-count{
+  color: var(--heading-color);
+}
+
 .blog-comment {
   display: flex;
   align-items: center;
@@ -61,36 +79,33 @@
 
 .blog-comment form label {
   font-weight: 500;
-  color: var(--dark-charcoal);
+  color: var(--paragraph-color);
 }
-
 .blog-comment form textarea {
   resize: vertical;
   outline: none;
   padding: 1rem;
   border-radius: 0.5rem;
   /* border: none; */
-  border: 3px solid var(--very-light-gray);
-  background-color: var(--extra-light-gray);
+  border: 3px solid var(--border-line-color);
+  background-color: var(--news-letter);
+  color: var(--paragraph-color);
   width: 100%;
   min-height: 100px;
+  max-height: 200px;
 }
 
 .blog-comment form button {
   border: none;
   border-radius: 0.5rem;
-  color: var(--bright-blue);
-  background-color: var(--white);
-  border: 2px solid var(--bright-blue);
+  background-color: var(--btn-primary-color);
+  color: white;
+  /* background-color: white; */
+  /* border: 2px solid #4b6bfb; */
   padding: 0.5rem 1rem;
   /* width: 50%; */
 }
 
-.blog-comment form button:hover {
-  color: var(--white);
-  background-color: var(--bright-blue);
-  /* border: none; */
-}
 
 .comment-body {
   display: flex;
@@ -101,8 +116,8 @@
 .comment-body h5 {
   /* width: 40%; */
   margin-left: 2rem;
-  color: var(--white);
-  background-color: var(--dark-charcoal);
+  color: white;
+  background-color: #3b3c4a;
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
 }

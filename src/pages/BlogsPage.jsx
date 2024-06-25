@@ -44,9 +44,7 @@ function BlogsPage() {
   return (
     <div>
       <ToastContainer />
-      <div className="container">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="container">
         <div className="app-heading-container">
           <h1 className="app-heading">Latest Post</h1>

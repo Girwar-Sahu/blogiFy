@@ -48,18 +48,32 @@ function AddBlogPage() {
     }
   }, [error, dispatch]);
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(
+          setUser({
+            uid: user.uid,
+            email: user.email,
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+          })
+        );
+      } else {
+        dispatch(clearUser());
+      }
+    });
+    return unsubscribe;
+  }, [dispatch]);
+
   return (
     <div>
       <ToastContainer />
-      <div className="container">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="container container-body">
         <BlogPostForm />
       </div>
-      <div className="container">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

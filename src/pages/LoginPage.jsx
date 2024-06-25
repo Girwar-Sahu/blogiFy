@@ -77,15 +77,11 @@ function LoginPage() {
   return (
     <div>
       <ToastContainer />
-      <div className="container">
         <Navbar />
-      </div>
       <div className="container container-body">
         <LoginForm />
       </div>
-      <div className="container">
         <Footer />
-      </div>
     </div>
   );
 }

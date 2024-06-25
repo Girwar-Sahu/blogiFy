@@ -88,7 +88,7 @@ function Blog() {
       <div>
         <span className="blog-tag">{blog?.category}</span>
       </div>
-      <div>
+      <div className="blog-title-area">
         <h1>{blog?.title}</h1>
         <p>{blog?.description}</p>
       </div>
@@ -100,8 +100,8 @@ function Blog() {
       <div className="main-blog-img">
         <img src={blog?.imageURL} alt="" />
       </div>
-      <div>{HTMLReactParser(`${blog?.content}`)}</div>
-      <div>
+      <span className="main-content">{HTMLReactParser(`${blog?.content}`)}</span>
+      <div className="comment-count">
         <h2>Comments ({comments.length})</h2>
       </div>
       <div className="blog-comment">

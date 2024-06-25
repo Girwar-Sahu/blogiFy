@@ -1,46 +1,42 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap");
 
 :root {
-  --white: #ffffff;
-  --light-blue: #f6f7ff;
-  --dark-blue-gray: #141624;
-  --med-gray: #696a75;
-  --light-gray: #97989f;
-  --dark-gray: #52525b;
-  --bright-blue: #4b6bfb;
-  --very-light-gray: #e8e8ea;
-  --extra-light-gray: #f6f6f7;
-  --dark-charcoal: #3b3c4a;
-  --light-black-trans: rgba(0, 0, 0, 0.1);
-  --deep-navy: #181a2a;
-  --med-dark-gray: #666666;
-  --black-trans: rgba(0, 0, 0, 0.5);
-  --grayish-black: #555555;
-  --gray: gray;
-  --dark-gray-black: #333333;
-  --light-silver: #cccccc;
-  --strong-blue: #0056b3;
-  --very-dark-gray: #151717;
-  --soft-gray: #ecedec;
-  --vivid-blue: #2d79f3;
-  --black: #000000;
-  --very-soft-gray: #ededef;
-  --muted-brown: #a1958b;
-  --light-sky-blue: #b3d4fc;
-  --soft-blue: #6793fb;
-  --off-white: #efefef;
-  --dark-gray-blue: #2a2a2a;
-  --deep-dark-gray: #252727;
+  --bg-color:#FFFFFF;
+  --heading-color:#000;
+  --heading-bg-color:#FFFFFF;
+  --paragraph-color:#3A3C4B;
+  --btn-primary-color:#4B6AFA;
+  --btn-bg-color:#F7F6FF;
+  --border-line-color:#E9E9EA;
+  --footer-color:#F7F7F7;
+  --news-letter:#FFFFFF;
+  --big-btn-color:#151717;
+  --big-btn-hover:#252727;
 }
 
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: "Poppins", sans-serif;
-   font-style: normal;
-   overflow:visible;
- }
- 
+[data-theme="dark"] {
+  --bg-color:#191A2B;
+  --heading-color:#FFFFFF;
+  --heading-bg-color:#000;
+  --paragraph-color:#97999E;
+  --border-line-color:#252435;
+  --btn-bg-color:#1A1F35;
+  --footer-color:#141725;
+  --news-letter:#252435;
+  --big-btn-color:#4B6AFA;
+  --big-btn-hover:#2b50f5;
+}
+
+.App{
+  background-color: var(--bg-color);
+  transition: background-color .25s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  overflow: visible;
+}

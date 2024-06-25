@@ -6,13 +6,18 @@ import "./HomePage.css";
 import RegisterForm from "../components/Form/RegisterForm";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../Firebase";
-import { setUser, clearUser, resetStatus , resetError} from "../slice/UserSlice";
+import {
+  setUser,
+  clearUser,
+  resetStatus,
+  resetError,
+} from "../slice/UserSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function RegisterPage() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.user.user);
   const status = useSelector((state) => state.user.status);
@@ -30,10 +35,10 @@ function RegisterPage() {
         progress: undefined,
         theme: "light",
       });
-      navigate(`/profile/${currentUser.uid}`)
+      navigate(`/profile/${currentUser.uid}`);
       dispatch(resetStatus());
     }
-  }, [status,currentUser,navigate, dispatch]);
+  }, [status, currentUser, navigate, dispatch]);
 
   useEffect(() => {
     if (error) {
@@ -72,15 +77,11 @@ function RegisterPage() {
   return (
     <div>
       <ToastContainer />
-      <div className="container">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="container container-body">
         <RegisterForm />
       </div>
-      <div className="container">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

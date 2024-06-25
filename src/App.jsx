@@ -10,20 +10,24 @@ import BlogsPage from "./pages/BlogsPage";
 import UserProfile from "./pages/UserProfile";
 import UpdateBlog from "./pages/UpdateBlog";
 import AboutPage from "./pages/Ablout";
+import {useSelector} from "react-redux"
 
 function App() {
+  const mode = useSelector((state) => state.mode.mode)
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/register" element={<RegisterPage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/blog/:id" element={<BlogPage />} />
-      <Route path="/blogs" element={<BlogsPage />} />
-      <Route path="/addblog" element={<AddBlogPage />} />
-      <Route path="/updateblog/:id" element={<UpdateBlog />} />
-      <Route path="/profile/:id" element={<UserProfile />} />
-      <Route path="/about" element={<AboutPage />} />
-    </Routes>
+    <div className="App" data-theme={mode ? "dark": "light"}>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/blog/:id" element={<BlogPage />} />
+        <Route path="/blogs" element={<BlogsPage />} />
+        <Route path="/addblog" element={<AddBlogPage />} />
+        <Route path="/updateblog/:id" element={<UpdateBlog />} />
+        <Route path="/profile/:id" element={<UserProfile />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </div>
   );
 }
 

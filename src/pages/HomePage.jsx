@@ -44,9 +44,7 @@ function HomePage() {
   return (
     <div>
       <ToastContainer />
-      <div className="container">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="container">
         <Carosuel data={slides} />
       </div>

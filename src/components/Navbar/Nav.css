@@ -1,18 +1,19 @@
 
 .active {
-  border-bottom: 5px solid var(--bright-blue);
-  color: var(--bright-blue);
+  border-bottom: 5px solid var(--btn-primary-color);
+  color: var(--btn-primary-color);
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  /* background-color: var(--dark-blue-gray); */
+  /* background-color: #0f1728; */
   /* position: sticky; */
   /* top: 0; */
-  /* border-bottom: 2px solid var(--very-light-gray); */
+  /* border-bottom: 2px solid #E8E8EA; */
+  margin: 0 auto;
+  padding-top: 1rem;
 }
 
 nav .title {
@@ -23,8 +24,9 @@ nav .title {
   margin: 1rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--black);
+  color: var(--heading-color);
 }
+
 
 nav ul {
   display: flex;
@@ -37,14 +39,14 @@ nav ul li {
 nav ul li a {
   display: block;
   text-decoration: none;
-  color: var(--dark-charcoal);
+  color: var(--paragraph-color);
   padding: 0.5rem;
   margin: 0 0.5rem;
   /* border-radius: 0.5rem; */
 }
 
 nav ul li a:not(.active):hover {
-  color: var(--bright-blue);
+  color: var(--btn-primary-color);
 }
 
 .menu {
@@ -62,8 +64,12 @@ nav ul li a:not(.active):hover {
 nav .menu span {
   height: 0.3rem;
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--heading-color);
   border-radius: 0.25rem;
+}
+
+.user{
+  color: var(--paragraph-color);
 }
 
 .nav-btns {
@@ -76,8 +82,8 @@ nav .menu span {
   width: 6.5em;
   height: 2.5em;
   margin: 0 0.5em;
-  background: var(--black);
-  color: var(--white);
+  background: var(--big-btn-color);
+  color: white;
   border: none;
   border-radius: 0.625em;
   font-size: 1rem;
@@ -89,12 +95,12 @@ nav .menu span {
 }
 
 .nav-btn:hover {
-  color: var(--black);
+  color: var(--heading-color);
 }
 
 .nav-btn:after {
   content: "";
-  background: var(--white);
+  background: var(--heading-bg-color);
   position: absolute;
   z-index: -1;
   left: -20%;
@@ -109,68 +115,6 @@ nav .menu span {
   transform: skewX(-45deg) scale(1, 1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-.theme-checkbox {
-  --toggle-size: 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 2.5em;
-  height: 1.2em;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(50%, var(--off-white)),
-      color-stop(50%, var(--dark-gray-blue))
-    )
-    no-repeat;
-  background: -o-linear-gradient(left, var(--off-white) 50%, var(--dark-gray-blue) 50%) no-repeat;
-  background: linear-gradient(to right, var(--off-white) 50%, var(--dark-gray-blue) 50%) no-repeat;
-  background-size: 205%;
-  background-position: 0;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 99em;
-  position: relative;
-  cursor: pointer;
-  font-size: var(--toggle-size);
-}
-
-.theme-checkbox::before {
-  content: "";
-  width: 0.8em;
-  height: 0.8em;
-  position: absolute;
-  top: 0.2em;
-  left: 0.2em;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(50%, var(--off-white)),
-      color-stop(50%, var(--dark-gray-blue))
-    )
-    no-repeat;
-  background: -o-linear-gradient(left, var(--off-white) 50%, var(--dark-gray-blue) 50%) no-repeat;
-  background: linear-gradient(to right, var(--off-white) 50%, var(--dark-gray-blue) 50%) no-repeat;
-  background-size: 205%;
-  background-position: 100%;
-  border-radius: 50%;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.theme-checkbox:checked::before {
-  left: calc(100% - 0.5em - 0.438em);
-  background-position: 0;
-}
-
-.theme-checkbox:checked {
-  background-position: 100%;
 }
 
 @media (max-width: 850px) {
@@ -202,7 +146,7 @@ nav .menu span {
     width: 100%;
   }
   .active {
-    border: 2px solid var(--bright-blue);
+    border: 2px solid var(--btn-primary-color);
     border-radius: 0.5rem;
   }
 }

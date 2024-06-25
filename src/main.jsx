@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import UserSlice from "./slice/UserSlice";
 import blogSlice from "./slice/BlogSlice";
 import CommentSlice from "./slice/CommentSlice";
+import DarkModeSlice from "./slice/DarkModeSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 const store = configureStore({
@@ -13,6 +14,7 @@ const store = configureStore({
     user: UserSlice,
     blogs: blogSlice,
     comments: CommentSlice,
+    mode: DarkModeSlice
   },
 });
 
