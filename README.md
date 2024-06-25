@@ -3,7 +3,13 @@
 Blogify is a simple and intuitive blogging platform that allows users to create, manage, and share blog posts. Built with React and Firebase, Blogify offers a seamless experience for both authors and readers.
 welsite link - https://blog-blogify.netlify.app/
 ## Snap Shot
-![Screenshot (19)](https://github.com/Girwar-Sahu/blogiFy/assets/109727463/6a98fd8c-4382-4747-941f-7d324b3ba33c)
+![Screenshot (21)](https://github.com/Girwar-Sahu/blogiFy/assets/109727463/2d0a8d9f-e1a5-4bc9-94ef-616255a395c5)
+![Screenshot (20)](https://github.com/Girwar-Sahu/blogiFy/assets/109727463/89c202d4-2a41-4f4e-8856-492d84cf82aa)
+![Screenshot (22)](https://github.com/Girwar-Sahu/blogiFy/assets/109727463/b79ae731-4de7-4aa1-b70c-1d8181785760)
+![Screenshot (24)](https://github.com/Girwar-Sahu/blogiFy/assets/109727463/0e5cc6a3-1f0d-498c-b0f6-3ac0bd5b6e70)
+![Screenshot (23)](https://github.com/Girwar-Sahu/blogiFy/assets/109727463/0872e189-102e-46f7-873e-03a6aaf9533c)
+![Screenshot (25)](https://github.com/Girwar-Sahu/blogiFy/assets/109727463/279c7dcb-84dd-462e-a6cf-e633b0bb79c3)
+
 
 ## Table of Contents
 
